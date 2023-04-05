@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Checkout example · Bootstrap v5.0</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+  <!-- Jquery -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="form-validation.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+  <div class="container">
+    <main>
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="./assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+        <h2>Danh sach sinh vien</h2>
+        <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group
+          has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+      </div>
+
+      <div class="row g-5">
+        <table class="table" >
+          <thead>
+            <tr>
+              <th scope="col">STT</th>
+              <th scope="col">Ma Sinh Vien</th>
+              <th scope="col">Ho Ten</th>
+              <th scope="col">Lop</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbodySV">
+           
+           
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">&copy; 2017–2021 Company Name</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script type="text/javascript" src="./jquery.tmpl.js"></script>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="./sv.js"></script>
+
+  <script id="svTemplate" type="text/x-jQuery-tmpl">
+    <tr>
+      <th scope="row">${STT}</th>
+      <td>${MaSV}</td>
+      <td>${HoTen}</td>
+      <td>${Lop}</td>
+      <td>
+        <button class="btn btn-warning" type="button">Edit</button>
+        <button class="btn btn-danger" type="button">Delete</button>
+      </td>
+    </tr>
+  </script>
+
+  <script src="form-validation.js"></script>
+</body>
+
+</html>
